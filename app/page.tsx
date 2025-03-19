@@ -106,7 +106,7 @@ export default function ComingSoonPage() {
       className="min-h-screen bg-white text-black overflow-hidden flex flex-col items-center justify-center p-4 md:p-8 font-mono"
       tabIndex={0}
     >
-      <div className="w-full max-w-2xl relative h-[550px] md:h-[600px] -mt-8 md:mt-0 flex items-center">
+      <div className="w-full max-w-2xl relative h-[550px] md:h-[600px] -mt-20 md:mt-0 flex items-center">
         <AnimatePresence mode="wait">
           {isLoaded ? (
             <motion.div
@@ -119,7 +119,7 @@ export default function ComingSoonPage() {
                 initial="initial"
                 animate="animate"
                 transition={{ duration: 0.3 }}
-                className="absolute -top-4 md:top-0 left-0 w-full"
+                className="absolute -top-8 md:top-0 left-0 w-full"
               >
                 <div className="text-[10px] mb-1 text-gray-500">SYSTEM</div>
                 <div className="text-xs">Welcome to bunnyrabb.it terminal [Version 1.0.0]</div>
@@ -130,7 +130,7 @@ export default function ComingSoonPage() {
                 initial="initial"
                 animate="animate"
                 transition={{ duration: 0.3, delay: 0.6 }}
-                className="absolute top-12 md:top-16 left-0 w-full"
+                className="absolute top-8 md:top-16 left-0 w-full"
               >
                 <div className="text-[10px] mb-1 text-gray-500">COMMAND</div>
                 <div className="text-xs font-bold">$ initialize bunnyrabb.it</div>
@@ -141,7 +141,7 @@ export default function ComingSoonPage() {
                 initial="initial"
                 animate="animate"
                 transition={{ duration: 0.3, delay: 1.2 }}
-                className="absolute top-28 md:top-32 left-0 w-full"
+                className="absolute top-24 md:top-32 left-0 w-full"
               >
                 <div className="text-[10px] mb-1 text-gray-500">OUTPUT</div>
                 <div className="text-[10px] whitespace-pre-wrap leading-tight">
@@ -170,7 +170,7 @@ export default function ComingSoonPage() {
                     initial="initial"
                     animate="animate"
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="absolute top-48 left-0 w-full"
+                    className="absolute top-40 left-0 w-full"
                   >
                     <motion.pre
                       initial={{ opacity: 0, y: 10 }}
@@ -233,7 +233,7 @@ export default function ComingSoonPage() {
                   initial="initial"
                   animate="animate"
                   transition={{ duration: 0.3, delay: 1 }}
-                  className="absolute top-[400px] md:top-[440px] left-0 w-full"
+                  className="absolute top-[380px] md:top-[440px] left-0 w-full"
                 >
                   <div className="text-[10px] mb-1 text-gray-500">SYSTEM</div>
                   <div className="text-xs">bunnyrabb.it initialized successfully.</div>
@@ -246,7 +246,7 @@ export default function ComingSoonPage() {
                   initial="initial"
                   animate="animate"
                   transition={{ duration: 0.3, delay: 1.5 }}
-                  className="absolute top-[440px] md:top-[480px] left-0 w-full"
+                  className="absolute top-[420px] md:top-[480px] left-0 w-full"
                 >
                   <div className="text-[10px] mb-1 text-gray-500">COMMAND</div>
                   <div className="text-xs font-bold">$ status</div>
@@ -259,7 +259,7 @@ export default function ComingSoonPage() {
                   initial="initial"
                   animate="animate"
                   transition={{ duration: 0.3, delay: 2 }}
-                  className="absolute top-[480px] md:top-[520px] left-0 w-full"
+                  className="absolute top-[460px] md:top-[520px] left-0 w-full"
                 >
                   <div className="text-[10px] mb-1 text-gray-500">OUTPUT</div>
                   <div className="text-xs">
