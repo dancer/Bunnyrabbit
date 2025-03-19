@@ -92,7 +92,7 @@ export default function ComingSoonPage() {
 
   // Typing animation for the initialization text
   const initText =
-    "Initializing bunnyrabb.it...\nLoading core modules...............Done\nEstablishing secure connection.....Done\nVerifying integrity................Done\n"
+    "Initializing bunnyrabb.it\nLoading core modules...............Done\nEstablishing secure connection.....Done\nVerifying integrity................Done\n"
 
   // Modify the animation variants for smoother transitions
   const fadeInUp: Variants = {
@@ -106,20 +106,20 @@ export default function ComingSoonPage() {
       className="min-h-screen bg-white text-black overflow-hidden flex flex-col items-center justify-center p-4 md:p-8 font-mono"
       tabIndex={0}
     >
-      <div className="w-full max-w-2xl">
+      <div className="w-full max-w-2xl relative h-[550px] md:h-[600px] -mt-8 md:mt-0 flex items-center">
         <AnimatePresence mode="wait">
           {isLoaded ? (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="space-y-3"
+              className="absolute inset-0 w-full"
             >
               <motion.div
                 variants={fadeInUp}
                 initial="initial"
                 animate="animate"
                 transition={{ duration: 0.3 }}
-                className="mb-3"
+                className="absolute -top-4 md:top-0 left-0 w-full"
               >
                 <div className="text-[10px] mb-1 text-gray-500">SYSTEM</div>
                 <div className="text-xs">Welcome to bunnyrabb.it terminal [Version 1.0.0]</div>
@@ -130,7 +130,7 @@ export default function ComingSoonPage() {
                 initial="initial"
                 animate="animate"
                 transition={{ duration: 0.3, delay: 0.6 }}
-                className="mb-3"
+                className="absolute top-12 md:top-16 left-0 w-full"
               >
                 <div className="text-[10px] mb-1 text-gray-500">COMMAND</div>
                 <div className="text-xs font-bold">$ initialize bunnyrabb.it</div>
@@ -141,7 +141,7 @@ export default function ComingSoonPage() {
                 initial="initial"
                 animate="animate"
                 transition={{ duration: 0.3, delay: 1.2 }}
-                className="mb-3"
+                className="absolute top-28 md:top-32 left-0 w-full"
               >
                 <div className="text-[10px] mb-1 text-gray-500">OUTPUT</div>
                 <div className="text-[10px] whitespace-pre-wrap leading-tight">
@@ -156,7 +156,6 @@ export default function ComingSoonPage() {
                       speed={20} 
                       onComplete={() => {
                         setTypingComplete(true)
-                        // Show bunny immediately after typing completes
                         setShowBunny(true)
                       }}
                     />
@@ -171,7 +170,7 @@ export default function ComingSoonPage() {
                     initial="initial"
                     animate="animate"
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="mb-3"
+                    className="absolute top-48 left-0 w-full"
                   >
                     <motion.pre
                       initial={{ opacity: 0, y: 10 }}
@@ -234,7 +233,7 @@ export default function ComingSoonPage() {
                   initial="initial"
                   animate="animate"
                   transition={{ duration: 0.3, delay: 1 }}
-                  className="mb-3"
+                  className="absolute top-[400px] md:top-[440px] left-0 w-full"
                 >
                   <div className="text-[10px] mb-1 text-gray-500">SYSTEM</div>
                   <div className="text-xs">bunnyrabb.it initialized successfully.</div>
@@ -247,7 +246,7 @@ export default function ComingSoonPage() {
                   initial="initial"
                   animate="animate"
                   transition={{ duration: 0.3, delay: 1.5 }}
-                  className="mb-3"
+                  className="absolute top-[440px] md:top-[480px] left-0 w-full"
                 >
                   <div className="text-[10px] mb-1 text-gray-500">COMMAND</div>
                   <div className="text-xs font-bold">$ status</div>
@@ -260,6 +259,7 @@ export default function ComingSoonPage() {
                   initial="initial"
                   animate="animate"
                   transition={{ duration: 0.3, delay: 2 }}
+                  className="absolute top-[480px] md:top-[520px] left-0 w-full"
                 >
                   <div className="text-[10px] mb-1 text-gray-500">OUTPUT</div>
                   <div className="text-xs">
@@ -277,7 +277,7 @@ export default function ComingSoonPage() {
               )}
             </motion.div>
           ) : (
-            <div className="flex items-center justify-center w-full">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center">
               <span className="text-xs">Loading</span>
               <span className="ml-1 h-3 w-1.5 bg-black inline-block" style={{ opacity: cursorVisible ? 1 : 0 }}></span>
             </div>
@@ -289,7 +289,7 @@ export default function ComingSoonPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 4.7, duration: 0.5 }}
-        className="fixed bottom-4 left-0 right-0 text-center text-[10px] text-gray-500"
+        className="absolute bottom-4 left-0 right-0 text-center text-[10px] text-gray-500"
       >
         © 2025 bunnyrabb.it
       </motion.div>
