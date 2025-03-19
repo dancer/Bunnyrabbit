@@ -170,7 +170,7 @@ export default function ComingSoonPage() {
                     initial="initial"
                     animate="animate"
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="absolute top-40 left-0 w-full"
+                    className="absolute top-40 md:top-52 left-0 w-full"
                   >
                     <motion.pre
                       initial={{ opacity: 0, y: 10 }}
